@@ -11,7 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.merttoptas.jetpack_compose_component_box.components.CustomElevatedButton
+import com.merttoptas.jetpack_compose_component_box.components.buttons.CustomElevatedButton
+import com.merttoptas.jetpack_compose_component_box.components.buttons.GradientButton
 import com.merttoptas.jetpack_compose_component_box.ui.theme.JetpackComposeComponentBoxTheme
 
 class MainActivity : ComponentActivity() {
@@ -51,6 +52,13 @@ private fun Body() {
             iconTintColor = Color(0xff648A4F),
             textColor = Color(0xff648A4F),
         )
+
+        GradientButton(modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 8.dp, vertical = 8.dp)
+        ) {
+
+        }
     }
 
     Column(
