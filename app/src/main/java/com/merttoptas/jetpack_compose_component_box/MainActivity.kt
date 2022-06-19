@@ -3,18 +3,11 @@ package com.merttoptas.jetpack_compose_component_box
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
-import com.merttoptas.jetpack_compose_component_box.components.buttons.CustomElevatedButton
-import com.merttoptas.jetpack_compose_component_box.components.buttons.GradientButton
-import com.merttoptas.jetpack_compose_component_box.components.buttons.OutlinedButton
+import com.merttoptas.jetpack_compose_component_box.navigation.NavGraph
 import com.merttoptas.jetpack_compose_component_box.ui.theme.JetpackComposeComponentBoxTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,54 +15,13 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposeComponentBoxTheme {
-                val scaffoldState = rememberScaffoldState()
-
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Scaffold(
-                        modifier = Modifier.fillMaxSize(),
-                        scaffoldState = scaffoldState,
-                        content = { Body() },
-                    )
-
+                    NavGraph()
                 }
             }
         }
     }
-}
-
-@Composable
-private fun Body() {
-    val content: @Composable (ColumnScope.() -> Unit) = {
-        CustomElevatedButton(
-            modifier = Modifier.fillMaxWidth(),
-            onClick = {},
-            text = "Enabled",
-            colors = ButtonDefaults.buttonColors(
-                backgroundColor = Color(0xffE5EADC)
-            ),
-            leadingIcon = Icons.Default.Add,
-            iconTintColor = Color(0xff648A4F),
-            textColor = Color(0xff648A4F),
-        )
-
-        GradientButton(modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 8.dp, vertical = 8.dp)
-        ) {}
-
-        OutlinedButton(
-            modifier = Modifier
-                .fillMaxWidth()
-                .wrapContentWidth(Alignment.CenterHorizontally),
-        )
-    }
-
-    Column(
-        Modifier
-            .fillMaxSize()
-            .padding(horizontal = 20.dp, vertical = 20.dp), content = content
-    )
 }

@@ -1,0 +1,7 @@
+package com.merttoptas.jetpack_compose_component_box.navigation
+
+sealed class NavScreen(val route: String) {
+    object DashBoard : NavScreen("dashboard")
+    object Detail : NavScreen("detail")
+    object Buttons : NavScreen("buttons")
+}
