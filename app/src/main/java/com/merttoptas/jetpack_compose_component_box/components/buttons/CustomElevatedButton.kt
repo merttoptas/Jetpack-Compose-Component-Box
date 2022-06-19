@@ -1,4 +1,4 @@
-package com.merttoptas.jetpack_compose_component_box.components
+package com.merttoptas.jetpack_compose_component_box.components.buttons
 
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
