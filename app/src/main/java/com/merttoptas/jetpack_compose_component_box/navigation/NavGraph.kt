@@ -11,6 +11,7 @@ import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.merttoptas.jetpack_compose_component_box.components.CustomScaffold
 import com.merttoptas.jetpack_compose_component_box.screen.buttons.ButtonsScreen
 import com.merttoptas.jetpack_compose_component_box.screen.dashboard.DashBoardScreen
+import com.merttoptas.jetpack_compose_component_box.screen.loading.LoadingScreen
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
@@ -27,13 +28,23 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
         ) {
 
             composable(NavScreen.DashBoard.route) {
-                DashBoardScreen(navigateToButtons = {
-                    navController.navigate(NavScreen.Buttons.route)
-                })
+                DashBoardScreen(
+                    navigateToButtons = {
+                        navController.navigate(NavScreen.Buttons.route)
+                    },
+                    navigateToLoadings = {
+                        navController.navigate(NavScreen.Loading.route)
+                    }
+                )
             }
 
             composable(NavScreen.Buttons.route) {
                 ButtonsScreen(navigateToBack = {
+                    navController.popBackStack()
+                })
+            }
+            composable(NavScreen.Loading.route) {
+                LoadingScreen(navigateToBack = {
                     navController.popBackStack()
                 })
             }
