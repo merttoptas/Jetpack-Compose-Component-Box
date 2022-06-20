@@ -1,6 +1,6 @@
 <br />
   <a href="https://github.com/othneildrew/Best-README-Template">
-  <h1 align="center">Jetpac Compose Component Box</h1>
+  <h1 align="center">Jetpack Compose Component Box</h1>
   
   
   [![License](https://badgen.net/badge/License/Apache/blue/)](https://opensource.org/licenses/Apache-2.0)
