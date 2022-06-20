@@ -1,6 +1,5 @@
 package com.merttoptas.jetpack_compose_component_box.components
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.IconButton
@@ -10,13 +9,10 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.merttoptas.jetpack_compose_component_box.R
 
 @Composable
 fun CustomTopBar(
@@ -64,12 +60,7 @@ private fun BodyPreview() {
             )
         },
         navigationIcon = {
-            IconButton(onClick = {}) {
-                Image(
-                    imageVector = ImageVector.vectorResource(id = R.drawable.ic_baseline_arrow_back_ios_24),
-                    contentDescription = null
-                )
-            }
+            BackArrowIcon { }
         },
         actions = {
             IconButton(onClick = {}) {}

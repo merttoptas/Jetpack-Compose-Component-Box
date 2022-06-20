@@ -1,6 +1,5 @@
 package com.merttoptas.jetpack_compose_component_box.screen.buttons
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.IconButton
@@ -12,10 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
-import com.merttoptas.jetpack_compose_component_box.R
+import com.merttoptas.jetpack_compose_component_box.components.BackArrowIcon
 import com.merttoptas.jetpack_compose_component_box.components.CustomScaffold
 import com.merttoptas.jetpack_compose_component_box.components.CustomTopBar
 import com.merttoptas.jetpack_compose_component_box.components.buttons.CustomElevatedButton
@@ -34,14 +31,7 @@ fun ButtonsScreen(navigateToBack: () -> Unit) {
                 text = "Buttons",
                 elevation = 10.dp,
                 navigationIcon = {
-                    IconButton(onClick = {
-                        navigateToBack()
-                    }) {
-                        Image(
-                            imageVector = ImageVector.vectorResource(id = R.drawable.ic_baseline_arrow_back_ios_24),
-                            contentDescription = null
-                        )
-                    }
+                    BackArrowIcon(navigateToBack)
                 },
                 actions = {
                     IconButton(onClick = {}) {}
