@@ -19,7 +19,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-@Preview
 fun StoryLoadingBar(
     modifier: Modifier = Modifier,
 ) {
@@ -46,4 +45,19 @@ fun StoryLoadingBar(
         progress = progress.value
     )
 
+}
+
+@Preview
+@Composable
+fun StoryLoadingBarPreview() {
+    LinearProgressIndicator(
+        modifier = Modifier
+            .padding(16.dp)
+            .clip(CircleShape)
+            .fillMaxWidth()
+            .height(20.dp),
+        backgroundColor = Color.DarkGray,
+        color = Color.White,
+        progress = 0.5f
+    )
 }
