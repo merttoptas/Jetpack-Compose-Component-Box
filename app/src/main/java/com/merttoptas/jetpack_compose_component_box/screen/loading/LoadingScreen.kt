@@ -13,6 +13,7 @@ import com.merttoptas.jetpack_compose_component_box.components.CustomScaffold
 import com.merttoptas.jetpack_compose_component_box.components.CustomTopBar
 import com.merttoptas.jetpack_compose_component_box.components.loading.CircularLoadingBar
 import com.merttoptas.jetpack_compose_component_box.components.loading.HorizontalLoadingBar
+import com.merttoptas.jetpack_compose_component_box.components.loading.StoryLoadingBar
 import com.merttoptas.jetpack_compose_component_box.components.loading.ThinLoadingBar
 
 @Composable
@@ -49,5 +50,7 @@ private fun Content() {
         HorizontalLoadingBar()
 
         ThinLoadingBar()
+
+        StoryLoadingBar()
     }
 }
