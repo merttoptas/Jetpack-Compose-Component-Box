@@ -29,18 +29,12 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
         ) {
 
             composable(NavScreen.DashBoard.route) {
-                DashBoardScreen(
-                    navigateToButtons = {
-                        navController.navigate(NavScreen.Buttons.route)
-                    },
-                    navigateToLoadings = {
-                        navController.navigate(NavScreen.Loading.route)
-                    }
-                )
                 DashBoardScreen(navigateToButtons = {
                     navController.navigate(NavScreen.Buttons.route)
                 }, navigateToOtpScreen = {
                     navController.navigate(NavScreen.Otp.route)
+                }, navigateToLoadings = {
+                    navController.navigate(NavScreen.Loading.route)
                 })
             }
 
@@ -51,7 +45,9 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
             }
             composable(NavScreen.Loading.route) {
                 LoadingScreen(navigateToBack = {
-
+                    navController.popBackStack()
+                })
+            }
             composable(NavScreen.Otp.route) {
                 OtpScreen(navigateToBack = {
                     navController.popBackStack()

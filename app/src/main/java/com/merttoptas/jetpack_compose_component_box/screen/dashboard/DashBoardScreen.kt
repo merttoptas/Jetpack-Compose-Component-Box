@@ -70,6 +70,7 @@ private fun Content(
             textColor = Color.White
         )
         CustomElevatedButton(
+            modifier = Modifier.padding(top = 10.dp),
             onClick = navigateToLoadings,
             text = "Loadings",
             textColor = Color.White
