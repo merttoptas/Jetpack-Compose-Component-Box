@@ -18,7 +18,8 @@ import com.merttoptas.jetpack_compose_component_box.components.buttons.CustomEle
 @Composable
 fun DashBoardScreen(
     navigateToButtons: () -> Unit,
-    navigateToLoadings: () -> Unit
+    navigateToLoadings: () -> Unit,
+    navigateToOtpScreen: () -> Unit
 ) {
     val scaffoldState = rememberScaffoldState()
 
@@ -36,6 +37,9 @@ fun DashBoardScreen(
                 navigateToButtons = {
                     navigateToButtons.invoke()
                 },
+                navigateToOtpScreen = {
+                    navigateToOtpScreen.invoke()
+                },
                 navigateToLoadings = {
                     navigateToLoadings.invoke()
                 }
@@ -48,6 +52,7 @@ fun DashBoardScreen(
 @Composable
 private fun Content(
     navigateToButtons: () -> Unit,
+    navigateToOtpScreen: () -> Unit,
     navigateToLoadings: () -> Unit,
 ) {
     Column(
@@ -59,10 +64,15 @@ private fun Content(
     ) {
         CustomElevatedButton(onClick = navigateToButtons, text = "Buttons", textColor = Color.White)
         CustomElevatedButton(
+            modifier = Modifier.padding(top = 10.dp),
+            onClick = navigateToOtpScreen,
+            text = "Otp",
+            textColor = Color.White
+        )
+        CustomElevatedButton(
             onClick = navigateToLoadings,
             text = "Loadings",
             textColor = Color.White
         )
     }
-
 }

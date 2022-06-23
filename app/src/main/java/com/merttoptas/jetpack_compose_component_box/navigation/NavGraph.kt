@@ -11,6 +11,7 @@ import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.merttoptas.jetpack_compose_component_box.components.CustomScaffold
 import com.merttoptas.jetpack_compose_component_box.screen.buttons.ButtonsScreen
 import com.merttoptas.jetpack_compose_component_box.screen.dashboard.DashBoardScreen
+import com.merttoptas.jetpack_compose_component_box.screen.otp.OtpScreen
 import com.merttoptas.jetpack_compose_component_box.screen.loading.LoadingScreen
 
 @OptIn(ExperimentalAnimationApi::class)
@@ -36,6 +37,11 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
                         navController.navigate(NavScreen.Loading.route)
                     }
                 )
+                DashBoardScreen(navigateToButtons = {
+                    navController.navigate(NavScreen.Buttons.route)
+                }, navigateToOtpScreen = {
+                    navController.navigate(NavScreen.Otp.route)
+                })
             }
 
             composable(NavScreen.Buttons.route) {
@@ -45,6 +51,9 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
             }
             composable(NavScreen.Loading.route) {
                 LoadingScreen(navigateToBack = {
+
+            composable(NavScreen.Otp.route) {
+                OtpScreen(navigateToBack = {
                     navController.popBackStack()
                 })
             }
