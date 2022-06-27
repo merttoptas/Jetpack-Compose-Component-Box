@@ -18,6 +18,24 @@ You can also contribute by opening a PR. What you need to do is to open a pr and
 ## Contribution 🙌
 All contributions are welcome! Feel free to jump to the issues and pick one for yourself! Please write a comment inside of the issue before you start working.
 
+## Rule 🙌
+* 1 - To contribute to the Component Box repo, first open a branch as feature/component-name.
+* 2 - Open a package file in the components package specific to the component.
+* 3 - Before opening the PR, the Components you write must have a @Preview view.
+* 4 - After the PR is open, add the name of the component you wrote to the Readme.md file under Features.
+
+## Features 🙌
+- Otp Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/otp/CustomOtpContainer.kt)
+- Custom Elevated Button Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/buttons/CustomElevatedButton.kt)
+- Custom Elevated Button Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/buttons/CustomElevatedButton.kt)
+- Gradient Button Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/buttons/GradientButton.kt)
+- Outlined Button Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/buttons/OutlinedButton.kt)
+- Circular Loading Bar Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/loading/CircularLoadingBar.kt)
+- Horizontal Loading Bar Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/loading/HorizontalLoadingBar.kt)
+- Line Loading Bar Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/loading/LineLoadingBar.kt)
+- Story Loading Bar Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/loading/StoryLoadingBar.kt)
+
+
 ## Contributors 👏
 * [tfaki](https://github.com/tfaki)
 * [cengiztoru](https://github.com/cengiztoru)
