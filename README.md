@@ -24,6 +24,13 @@ All contributions are welcome! Feel free to jump to the issues and pick one for 
 * 3 - Before opening the PR, the Components you write must have a @Preview view.
 * 4 - After the PR is open, add the name of the component you wrote to the Readme.md file under Features.
 
+## Screens 🙌
+<p align="center">
+ <img src="docs/gif/buttons.gif" width="25%"/>
+  <img src="docs/gif/otp.gif" width="25%"/>
+  <img src="docs/gif/loadings.gif" width="25%"/>
+</p>
+
 ## Features 🙌
 - Otp Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/otp/CustomOtpContainer.kt)
 - Custom Elevated Button Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/buttons/CustomElevatedButton.kt)
