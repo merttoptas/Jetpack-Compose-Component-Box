@@ -1,6 +1,5 @@
 package com.merttoptas.jetpack_compose_component_box.components.otp
 
-import android.text.style.BackgroundColorSpan
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -28,7 +27,7 @@ import kotlinx.coroutines.launch
 fun CustomOtpContainer(
     modifier: Modifier = Modifier,
     value: String,
-    backgroundColor : Color = Color.White,
+    backgroundColor: Color = Color.White,
     onValueChanged: (String) -> Unit,
     length: Int = 5,
 ) {
