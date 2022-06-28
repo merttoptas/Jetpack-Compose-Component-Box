@@ -22,8 +22,8 @@ fun OutlinedButton(modifier: Modifier = Modifier) {
         shape = RoundedCornerShape(50), // = 50% percent
         // or shape = CircleShape
         colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Red)
-    ){
-        Text( text = "Outlined Button" )
+    ) {
+        Text(text = "Outlined Button")
     }
 }
 
