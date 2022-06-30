@@ -19,7 +19,8 @@ import com.merttoptas.jetpack_compose_component_box.components.buttons.CustomEle
 fun DashBoardScreen(
     navigateToButtons: () -> Unit,
     navigateToLoadings: () -> Unit,
-    navigateToOtpScreen: () -> Unit
+    navigateToOtpScreen: () -> Unit,
+    navigateToExpandableCardScreen: () -> Unit
 ) {
     val scaffoldState = rememberScaffoldState()
 
@@ -42,6 +43,9 @@ fun DashBoardScreen(
                 },
                 navigateToLoadings = {
                     navigateToLoadings.invoke()
+                },
+                navigateToExpandableCardScreen = {
+                    navigateToExpandableCardScreen.invoke()
                 }
             )
         },
@@ -54,6 +58,8 @@ private fun Content(
     navigateToButtons: () -> Unit,
     navigateToOtpScreen: () -> Unit,
     navigateToLoadings: () -> Unit,
+    navigateToExpandableCardScreen: () -> Unit
+
 ) {
     Column(
         modifier = Modifier
@@ -73,6 +79,12 @@ private fun Content(
             modifier = Modifier.padding(top = 10.dp),
             onClick = navigateToLoadings,
             text = "Loadings",
+            textColor = Color.White
+        )
+        CustomElevatedButton(
+            modifier = Modifier.padding(top = 10.dp),
+            onClick = navigateToExpandableCardScreen,
+            text = "Expandable Card",
             textColor = Color.White
         )
     }

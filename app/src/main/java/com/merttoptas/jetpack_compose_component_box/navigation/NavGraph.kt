@@ -2,6 +2,7 @@ package com.merttoptas.jetpack_compose_component_box.navigation
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -10,11 +11,12 @@ import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.merttoptas.jetpack_compose_component_box.components.CustomScaffold
 import com.merttoptas.jetpack_compose_component_box.screen.buttons.ButtonsScreen
+import com.merttoptas.jetpack_compose_component_box.screen.card.ExpandableCardScreen
 import com.merttoptas.jetpack_compose_component_box.screen.dashboard.DashBoardScreen
 import com.merttoptas.jetpack_compose_component_box.screen.otp.OtpScreen
 import com.merttoptas.jetpack_compose_component_box.screen.loading.LoadingScreen
 
-@OptIn(ExperimentalAnimationApi::class)
+@OptIn(ExperimentalAnimationApi::class, ExperimentalMaterialApi::class)
 @Composable
 fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
     val navController = rememberAnimatedNavController()
@@ -35,6 +37,8 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
                     navController.navigate(NavScreen.Otp.route)
                 }, navigateToLoadings = {
                     navController.navigate(NavScreen.Loading.route)
+                }, navigateToExpandableCardScreen = {
+                    navController.navigate(NavScreen.ExpandableCard.route)
                 })
             }
 
@@ -50,6 +54,11 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
             }
             composable(NavScreen.Otp.route) {
                 OtpScreen(navigateToBack = {
+                    navController.popBackStack()
+                })
+            }
+            composable(NavScreen.ExpandableCard.route) {
+                ExpandableCardScreen(navigateToBack = {
                     navController.popBackStack()
                 })
             }
