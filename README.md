@@ -41,6 +41,7 @@ All contributions are welcome! Feel free to jump to the issues and pick one for 
 - Horizontal Loading Bar Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/loading/HorizontalLoadingBar.kt)
 - Line Loading Bar Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/loading/LineLoadingBar.kt)
 - Story Loading Bar Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/loading/StoryLoadingBar.kt)
+- Expandable Card Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/card/ExpandableCard.kt)
 
 
 ## Contributors 👏
