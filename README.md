@@ -45,5 +45,7 @@ All contributions are welcome! Feel free to jump to the issues and pick one for 
 
 ## Contributors 👏
 * [tfaki](https://github.com/tfaki)
-* [cengiztoru](https://github.com/cengiztoru)
+* [cengiztoru](https://github.com/cengiztoru) 
 * [halilozel1903](https://github.com/halilozel1903)
+* [nisaefendioglu](https://github.com/nisaefendioglu)
+
