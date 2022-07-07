@@ -15,6 +15,7 @@ import com.merttoptas.jetpack_compose_component_box.screen.card.ExpandableCardSc
 import com.merttoptas.jetpack_compose_component_box.screen.dashboard.DashBoardScreen
 import com.merttoptas.jetpack_compose_component_box.screen.otp.OtpScreen
 import com.merttoptas.jetpack_compose_component_box.screen.loading.LoadingScreen
+import com.merttoptas.jetpack_compose_component_box.screen.progressdialog.ProgressDialogScreen
 
 @OptIn(ExperimentalAnimationApi::class, ExperimentalMaterialApi::class)
 @Composable
@@ -39,6 +40,8 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
                     navController.navigate(NavScreen.Loading.route)
                 }, navigateToExpandableCardScreen = {
                     navController.navigate(NavScreen.ExpandableCard.route)
+                }, navigateToProgressDialogScreen = {
+                    navController.navigate(NavScreen.ProgressDialog.route)
                 })
             }
 
@@ -59,6 +62,11 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
             }
             composable(NavScreen.ExpandableCard.route) {
                 ExpandableCardScreen(navigateToBack = {
+                    navController.popBackStack()
+                })
+            }
+            composable(NavScreen.ProgressDialog.route) {
+                ProgressDialogScreen(navigateToBack = {
                     navController.popBackStack()
                 })
             }

@@ -1,9 +1,7 @@
 package com.merttoptas.jetpack_compose_component_box.screen.dashboard
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
@@ -21,6 +19,7 @@ fun DashBoardScreen(
     navigateToLoadings: () -> Unit,
     navigateToOtpScreen: () -> Unit,
     navigateToExpandableCardScreen: () -> Unit
+    navigateToProgressDialogScreen : () -> Unit,
 ) {
     val scaffoldState = rememberScaffoldState()
 
@@ -46,6 +45,8 @@ fun DashBoardScreen(
                 },
                 navigateToExpandableCardScreen = {
                     navigateToExpandableCardScreen.invoke()
+                navigateToProgressDialogScreen = {
+                    navigateToProgressDialogScreen.invoke()
                 }
             )
         },
@@ -60,13 +61,14 @@ private fun Content(
     navigateToLoadings: () -> Unit,
     navigateToExpandableCardScreen: () -> Unit
 
+    navigateToProgressDialogScreen : () -> Unit,
 ) {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(horizontal = 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.SpaceAround
+        verticalArrangement = Arrangement.Center
     ) {
         CustomElevatedButton(onClick = navigateToButtons, text = "Buttons", textColor = Color.White)
         CustomElevatedButton(
@@ -85,6 +87,12 @@ private fun Content(
             modifier = Modifier.padding(top = 10.dp),
             onClick = navigateToExpandableCardScreen,
             text = "Expandable Card",
+            textColor = Color.White
+        )
+        CustomElevatedButton(
+            modifier = Modifier.padding(top = 10.dp),
+            onClick = navigateToProgressDialogScreen,
+            text = "Progress Dialog",
             textColor = Color.White
         )
     }

@@ -23,7 +23,7 @@ fun CustomTopBar(
             text = text,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth(),
-            color = MaterialTheme.colors.secondary,
+            color = MaterialTheme.colors.onSecondary,
             style = MaterialTheme.typography.subtitle1
         )
     },
