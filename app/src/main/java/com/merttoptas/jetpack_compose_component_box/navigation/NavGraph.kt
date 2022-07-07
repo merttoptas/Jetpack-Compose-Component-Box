@@ -11,6 +11,7 @@ import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.merttoptas.jetpack_compose_component_box.components.CustomScaffold
 import com.merttoptas.jetpack_compose_component_box.screen.buttons.ButtonsScreen
+import com.merttoptas.jetpack_compose_component_box.screen.card.BasicCardsScreen
 import com.merttoptas.jetpack_compose_component_box.screen.card.ExpandableCardScreen
 import com.merttoptas.jetpack_compose_component_box.screen.dashboard.DashBoardScreen
 import com.merttoptas.jetpack_compose_component_box.screen.otp.OtpScreen
@@ -40,6 +41,8 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
                     navController.navigate(NavScreen.Loading.route)
                 }, navigateToExpandableCardScreen = {
                     navController.navigate(NavScreen.ExpandableCard.route)
+                }, navigateToBasicCardScreen = {
+                    navController.navigate(NavScreen.BasicCards.route)
                 }, navigateToProgressDialogScreen = {
                     navController.navigate(NavScreen.ProgressDialog.route)
                 })
@@ -65,6 +68,13 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
                     navController.popBackStack()
                 })
             }
+
+            composable(NavScreen.BasicCards.route) {
+                BasicCardsScreen(navigateToBack = {
+                    navController.popBackStack()
+                })
+            }
+
             composable(NavScreen.ProgressDialog.route) {
                 ProgressDialogScreen(navigateToBack = {
                     navController.popBackStack()
