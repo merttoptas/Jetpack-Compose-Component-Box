@@ -31,6 +31,11 @@ All contributions are welcome! Feel free to jump to the issues and pick one for 
   <img src="docs/gif/loadings.gif" width="25%"/>
 </p>
 
+<p align="center">
+ <img src="docs/gif/expandable-card.gif" width="25%"/>
+  <img src="docs/gif/progress-dialog.gif" width="25%"/>
+</p>
+
 ## Features 👀
 - Otp Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/otp/CustomOtpContainer.kt)
 - Custom Elevated Button Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/buttons/CustomElevatedButton.kt)
