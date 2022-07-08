@@ -12,13 +12,16 @@ import androidx.compose.ui.unit.dp
 import com.merttoptas.jetpack_compose_component_box.components.CustomScaffold
 import com.merttoptas.jetpack_compose_component_box.components.CustomTopBar
 import com.merttoptas.jetpack_compose_component_box.components.buttons.CustomElevatedButton
+import com.merttoptas.jetpack_compose_component_box.components.card.CustomBasicShareCard
+import com.merttoptas.jetpack_compose_component_box.components.cards.CustomHorizontalCard
 
 @Composable
 fun DashBoardScreen(
     navigateToButtons: () -> Unit,
     navigateToLoadings: () -> Unit,
     navigateToOtpScreen: () -> Unit,
-    navigateToExpandableCardScreen: () -> Unit
+    navigateToExpandableCardScreen: () -> Unit,
+    navigateToBasicCardScreen : () -> Unit,
     navigateToProgressDialogScreen : () -> Unit,
 ) {
     val scaffoldState = rememberScaffoldState()
@@ -45,6 +48,10 @@ fun DashBoardScreen(
                 },
                 navigateToExpandableCardScreen = {
                     navigateToExpandableCardScreen.invoke()
+                },
+                navigateToBasicCardScreen = {
+                    navigateToBasicCardScreen.invoke()
+                },
                 navigateToProgressDialogScreen = {
                     navigateToProgressDialogScreen.invoke()
                 }
@@ -59,8 +66,8 @@ private fun Content(
     navigateToButtons: () -> Unit,
     navigateToOtpScreen: () -> Unit,
     navigateToLoadings: () -> Unit,
-    navigateToExpandableCardScreen: () -> Unit
-
+    navigateToExpandableCardScreen: () -> Unit,
+    navigateToBasicCardScreen : () -> Unit,
     navigateToProgressDialogScreen : () -> Unit,
 ) {
     Column(
@@ -89,6 +96,14 @@ private fun Content(
             text = "Expandable Card",
             textColor = Color.White
         )
+
+        CustomElevatedButton(
+            modifier = Modifier.padding(top = 10.dp),
+            onClick = navigateToBasicCardScreen,
+            text = "Basic Cards",
+            textColor = Color.White
+        )
+
         CustomElevatedButton(
             modifier = Modifier.padding(top = 10.dp),
             onClick = navigateToProgressDialogScreen,
