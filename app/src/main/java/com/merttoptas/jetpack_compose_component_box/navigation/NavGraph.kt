@@ -14,9 +14,10 @@ import com.merttoptas.jetpack_compose_component_box.screen.buttons.ButtonsScreen
 import com.merttoptas.jetpack_compose_component_box.screen.card.BasicCardsScreen
 import com.merttoptas.jetpack_compose_component_box.screen.card.ExpandableCardScreen
 import com.merttoptas.jetpack_compose_component_box.screen.dashboard.DashBoardScreen
-import com.merttoptas.jetpack_compose_component_box.screen.otp.OtpScreen
 import com.merttoptas.jetpack_compose_component_box.screen.loading.LoadingScreen
+import com.merttoptas.jetpack_compose_component_box.screen.otp.OtpScreen
 import com.merttoptas.jetpack_compose_component_box.screen.progressdialog.ProgressDialogScreen
+import com.merttoptas.jetpack_compose_component_box.screen.search.SearchScreen
 
 @OptIn(ExperimentalAnimationApi::class, ExperimentalMaterialApi::class)
 @Composable
@@ -45,6 +46,8 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
                     navController.navigate(NavScreen.BasicCards.route)
                 }, navigateToProgressDialogScreen = {
                     navController.navigate(NavScreen.ProgressDialog.route)
+                }, navigateToSearchBarScreen = {
+                    navController.navigate(NavScreen.SearchBar.route)
                 })
             }
 
@@ -77,6 +80,12 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
 
             composable(NavScreen.ProgressDialog.route) {
                 ProgressDialogScreen(navigateToBack = {
+                    navController.popBackStack()
+                })
+            }
+
+            composable(NavScreen.SearchBar.route) {
+                SearchScreen(navigateToBack = {
                     navController.popBackStack()
                 })
             }
