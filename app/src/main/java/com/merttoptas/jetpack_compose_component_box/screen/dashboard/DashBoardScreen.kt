@@ -1,7 +1,9 @@
 package com.merttoptas.jetpack_compose_component_box.screen.dashboard
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
@@ -12,8 +14,6 @@ import androidx.compose.ui.unit.dp
 import com.merttoptas.jetpack_compose_component_box.components.CustomScaffold
 import com.merttoptas.jetpack_compose_component_box.components.CustomTopBar
 import com.merttoptas.jetpack_compose_component_box.components.buttons.CustomElevatedButton
-import com.merttoptas.jetpack_compose_component_box.components.card.CustomBasicShareCard
-import com.merttoptas.jetpack_compose_component_box.components.cards.CustomHorizontalCard
 
 @Composable
 fun DashBoardScreen(
@@ -21,8 +21,9 @@ fun DashBoardScreen(
     navigateToLoadings: () -> Unit,
     navigateToOtpScreen: () -> Unit,
     navigateToExpandableCardScreen: () -> Unit,
-    navigateToBasicCardScreen : () -> Unit,
-    navigateToProgressDialogScreen : () -> Unit,
+    navigateToBasicCardScreen: () -> Unit,
+    navigateToProgressDialogScreen: () -> Unit,
+    navigateToSearchBarScreen: () -> Unit
 ) {
     val scaffoldState = rememberScaffoldState()
 
@@ -54,6 +55,9 @@ fun DashBoardScreen(
                 },
                 navigateToProgressDialogScreen = {
                     navigateToProgressDialogScreen.invoke()
+                },
+                navigateToSearchBarScreen = {
+                    navigateToSearchBarScreen.invoke()
                 }
             )
         },
@@ -67,8 +71,9 @@ private fun Content(
     navigateToOtpScreen: () -> Unit,
     navigateToLoadings: () -> Unit,
     navigateToExpandableCardScreen: () -> Unit,
-    navigateToBasicCardScreen : () -> Unit,
-    navigateToProgressDialogScreen : () -> Unit,
+    navigateToBasicCardScreen: () -> Unit,
+    navigateToProgressDialogScreen: () -> Unit,
+    navigateToSearchBarScreen: () -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -108,6 +113,13 @@ private fun Content(
             modifier = Modifier.padding(top = 10.dp),
             onClick = navigateToProgressDialogScreen,
             text = "Progress Dialog",
+            textColor = Color.White
+        )
+
+        CustomElevatedButton(
+            modifier = Modifier.padding(top = 10.dp),
+            onClick = navigateToSearchBarScreen,
+            text = "SearchBar",
             textColor = Color.White
         )
     }

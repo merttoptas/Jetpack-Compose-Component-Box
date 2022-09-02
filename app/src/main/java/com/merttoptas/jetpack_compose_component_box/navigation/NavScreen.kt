@@ -8,4 +8,5 @@ sealed class NavScreen(val route: String) {
     object ExpandableCard : NavScreen("expandableCard")
     object BasicCards : NavScreen("basicCards")
     object ProgressDialog : NavScreen("progressDialog")
+    object SearchBar : NavScreen("searchBar")
 }
