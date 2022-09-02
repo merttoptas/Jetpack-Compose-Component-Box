@@ -27,8 +27,8 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun SearchBar(
+    modifier: Modifier,
     query: String,
-    modifier: Modifier = Modifier,
     placeholderText: String = "",
     border: BorderStroke = BorderStroke((0.5f).dp, MaterialTheme.colors.primary),
     backgroundColor: Color = MaterialTheme.colors.surface,
@@ -101,5 +101,5 @@ fun SearchBar(
 @Composable
 @Preview
 fun SearchBarPreview() {
-    SearchBar(query = "Android") {}
+    SearchBar(query = "Android", modifier = Modifier) {}
 }

@@ -26,6 +26,7 @@ fun SearchBarScreenContent() {
 
     Column(modifier = Modifier.fillMaxSize()) {
         SearchBar(
+            modifier = Modifier,
             query = searchQuery,
             placeholderText = "Search",
             onQueryChanged = {
