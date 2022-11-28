@@ -14,8 +14,7 @@ import com.merttoptas.jetpack_compose_component_box.components.CustomTopBar
 import com.merttoptas.jetpack_compose_component_box.components.card.CustomBasicImageIconCard
 import com.merttoptas.jetpack_compose_component_box.components.card.CustomBasicShareCard
 import com.merttoptas.jetpack_compose_component_box.components.card.CustomBasicShareWithIconCard
-import com.merttoptas.jetpack_compose_component_box.components.card.ExpandableCard
-import com.merttoptas.jetpack_compose_component_box.components.cards.CustomHorizontalCard
+import com.merttoptas.jetpack_compose_component_box.components.card.CustomHorizontalCard
 
 
 @ExperimentalMaterialApi

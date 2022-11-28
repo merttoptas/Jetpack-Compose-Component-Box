@@ -10,7 +10,9 @@ import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.merttoptas.jetpack_compose_component_box.components.CustomScaffold
+import com.merttoptas.jetpack_compose_component_box.components.halfcirclepercentgraph.HalfCirclePercentGraph
 import com.merttoptas.jetpack_compose_component_box.screen.buttons.ButtonsScreen
+import com.merttoptas.jetpack_compose_component_box.screen.canvasviews.halfcirclepercentgraph.HalfCirclePercentGraphScreen
 import com.merttoptas.jetpack_compose_component_box.screen.card.BasicCardsScreen
 import com.merttoptas.jetpack_compose_component_box.screen.card.ExpandableCardScreen
 import com.merttoptas.jetpack_compose_component_box.screen.dashboard.DashBoardScreen
@@ -48,6 +50,8 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
                     navController.navigate(NavScreen.ProgressDialog.route)
                 }, navigateToSearchBarScreen = {
                     navController.navigate(NavScreen.SearchBar.route)
+                }, navigateToHalfCircleProgress = {
+                    navController.navigate(NavScreen.HalfCircleProgressBar.route)
                 })
             }
 
@@ -86,6 +90,12 @@ fun NavGraph(startDestination: String = NavScreen.DashBoard.route) {
 
             composable(NavScreen.SearchBar.route) {
                 SearchScreen(navigateToBack = {
+                    navController.popBackStack()
+                })
+            }
+
+            composable(NavScreen.HalfCircleProgressBar.route) {
+                HalfCirclePercentGraphScreen(navigateToBack = {
                     navController.popBackStack()
                 })
             }

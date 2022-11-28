@@ -1,4 +1,4 @@
-package com.merttoptas.jetpack_compose_component_box.components.cards
+package com.merttoptas.jetpack_compose_component_box.components.card
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*

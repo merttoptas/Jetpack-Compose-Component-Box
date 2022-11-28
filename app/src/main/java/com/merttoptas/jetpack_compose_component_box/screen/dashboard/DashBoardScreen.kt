@@ -23,7 +23,8 @@ fun DashBoardScreen(
     navigateToExpandableCardScreen: () -> Unit,
     navigateToBasicCardScreen: () -> Unit,
     navigateToProgressDialogScreen: () -> Unit,
-    navigateToSearchBarScreen: () -> Unit
+    navigateToSearchBarScreen: () -> Unit,
+    navigateToHalfCircleProgress: () -> Unit,
 ) {
     val scaffoldState = rememberScaffoldState()
 
@@ -58,6 +59,9 @@ fun DashBoardScreen(
                 },
                 navigateToSearchBarScreen = {
                     navigateToSearchBarScreen.invoke()
+                },
+                navigateToHalfCircleProgress = {
+                    navigateToHalfCircleProgress.invoke()
                 }
             )
         },
@@ -74,6 +78,7 @@ private fun Content(
     navigateToBasicCardScreen: () -> Unit,
     navigateToProgressDialogScreen: () -> Unit,
     navigateToSearchBarScreen: () -> Unit,
+    navigateToHalfCircleProgress: () -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -120,6 +125,13 @@ private fun Content(
             modifier = Modifier.padding(top = 10.dp),
             onClick = navigateToSearchBarScreen,
             text = "SearchBar",
+            textColor = Color.White
+        )
+
+        CustomElevatedButton(
+            modifier = Modifier.padding(top = 10.dp),
+            onClick = navigateToHalfCircleProgress,
+            text = "Half Circle Progress",
             textColor = Color.White
         )
     }
