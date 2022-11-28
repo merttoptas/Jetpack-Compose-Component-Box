@@ -4,9 +4,9 @@
   
   
   [![License](https://badgen.net/badge/License/Apache/blue/)](https://opensource.org/licenses/Apache-2.0)
-  ![MinAPI](https://badgen.net/badge/MinAPI/21/)
-  [![Compose](https://img.shields.io/badge/compose-1.2.0-red.svg?)](https://developer.android.com/jetpack/compose)
-  [![Kotlin](https://img.shields.io/badge/Kotlin-1.6.21-blue.svg?logo=kotlin)](http://kotlinlang.org)
+  ![MinAPI](https://badgen.net/badge/MinAPI/23/)
+  [![Compose](https://img.shields.io/badge/compose-1.3.1-red?)](https://developer.android.com/jetpack/compose)
+  [![Kotlin](https://img.shields.io/badge/Kotlin-1.7.10-blue?logo=kotlin)](http://kotlinlang.org)
   [![Gradle](https://img.shields.io/badge/gradle-7.2.1-blue.svg?)](https://lv.binarybabel.org/catalog/gradle/latest)
 
   
@@ -34,6 +34,8 @@ All contributions are welcome! Feel free to jump to the issues and pick one for 
 <p align="center">
  <img src="docs/gif/expandable-card.gif" width="25%"/>
   <img src="docs/gif/progress-dialog.gif" width="25%"/>
+    <img src="docs/gif/half-circle-graph.gif" width="25%"/>
+
 </p>
 
 ## Features 👀
@@ -48,7 +50,7 @@ All contributions are welcome! Feel free to jump to the issues and pick one for 
 - Story Loading Bar Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/loading/StoryLoadingBar.kt)
 - Expandable Card Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/card/ExpandableCard.kt)
 - Progress Dialog Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/progressdialog/SimpleProgressDialog.kt)
-
+- Half Circle Percent Graph Component | [Code](https://github.com/merttoptas/Jetpack-Compose-Component-Box/blob/master/app/src/main/java/com/merttoptas/jetpack_compose_component_box/components/halfcirclepercentgraph/HalfCirclePercentGraph.kt)
 
 
 ## Contributors 👏
